@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #xdd{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="xdd"></div>
+    <script>
+       let xdd = document.getElementById("xdd");
+       // 方案1 
+       xdd.onclick = function(){
+            console.log(this)
+            let _this= this;  //this 是<div id="xdd"></div>
+            //开启定时器
+            setTimeout(function(){
+                console.log(this) //this是window
+                //变粉色
+                _this.style.backgroundColor = 'pink';
+            },2000);
+        }
+        // // 方案2
+        xdd.onclick = function(){
+            console.log(this) // this是<div id="xdd"></div>
+            //开启定时器
+            setTimeout(()=>{
+                console.log(this)// 使用setTimeout() 方法所在环境时的this对象
+                //变粉色
+                this.style.backgroundColor = 'pink';
+            },2000);
+        }
+    </script>
+</body>
+</html>

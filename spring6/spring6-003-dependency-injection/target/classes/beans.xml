@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="xxxx" class="com.powernode.spring6.dao.UserDao"/>
+
+    <bean id="yyyy" class="com.powernode.spring6.dao.VipDao"/>
+
+    <bean id="csBean3" class="com.powernode.spring6.service.CustomerService">
+        <!--不指定下标，也不指定参数名，让spring自己做类型匹配吧。-->
+        <!--这种方式实际上是根据类型进行注入的。spring会自动根据类型来判断把ref注入给哪个参数。-->
+        <constructor-arg ref="yyyy"/>
+        <constructor-arg ref="xxxx"/>
+    </bean>
+
+    <bean id="csBean2" class="com.powernode.spring6.service.CustomerService">
+        <!--根据构造方法参数的名字进行注入。-->
+        <constructor-arg name="vipDao" ref="yyyy"/>
+        <constructor-arg name="userDao" ref="xxxx"/>
+    </bean>
+
+    <bean id="csBean" class="com.powernode.spring6.service.CustomerService">
+        <!--构造注入-->
+        <!--
+            index属性指定参数下标，第一个参数是0，第二个参数是1，第三个参数是2，以此类推。
+            ref属性用来指定注入的bean的id
+        -->
+        <!--指定构造方法的第一个参数，下标是0-->
+        <constructor-arg index="0" ref="xxxx"/>
+        <!--指定构造方法的第二个参数，下标是1-->
+        <constructor-arg index="1" ref="yyyy"/>
+    </bean>
+
+</beans>

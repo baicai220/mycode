@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/spring6-004-scope" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/spring6-001-revelation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-002-first/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-003-dependency-injection/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-004-scope/pom.xml" />
+        <option value="$PROJECT_DIR$/simple-factory/pom.xml" />
+        <option value="$PROJECT_DIR$/factory-method/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-005-bean-instantiation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-006-bean-lifecycle/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-007-circular-dependency/pom.xml" />
+        <option value="$PROJECT_DIR$/review-reflect/pom.xml" />
+        <option value="$PROJECT_DIR$/myspring/pom.xml" />
+        <option value="$PROJECT_DIR$/myspring-test/pom.xml" />
+        <option value="$PROJECT_DIR$/review-annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-008-ioc-annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-009-jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/static-proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/dynamic-proxy-jdk/pom.xml" />
+        <option value="$PROJECT_DIR$/dynamic-proxy-cglib/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-010-spring-aspectj-aop-anno/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-011-spring-aspectj-aop-xml/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-012-aop-realapp/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-013-tx-bank/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-014-tx-bank-xml/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-015-junit/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-016-sm/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--配置我们自定义的作用域-->
+    <bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+        <property name="scopes">
+            <map>
+                <entry key="threadScope">
+                    <!--这个Scope接口的实现类使用的是Spring框架内置的。也可以自定义。-->
+                    <bean class="org.springframework.context.support.SimpleThreadScope"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <!--
+        目前来说：scope属性有两个值
+            第一个值：singleton 单例（默认情况下就是单例的。）
+            第二个值：prototype 原型/多例
+
+        其实scope属性有多个值：
+            例如：request session
+            但是request session要求项目必须是一个web应用。当你引入springmvc框架的时候，这两个值就可以使用了。
+            request：一次请求当中一个bean
+            session：一次会话中只有一个bean
+    -->
+    <bean id="sb" class="com.powernode.spring6.bean.SpringBean" scope="threadScope"></bean>
+
+</beans>

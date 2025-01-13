@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--配置dao-->
+    <bean id="userDaoBean" class="com.powernode.spring6.dao.UserDao"/>
+
+    <!--配置service-->
+    <bean id="userServiceBean" class="com.powernode.spring6.service.UserService">
+        <!-- 想让Spring调用对应的set方法，需要配置property标签 -->
+        <!-- name属性怎么指定值：set方法的方法名，去掉set，然后把剩下的单词首字母变小写，写到这里。-->
+        <!-- ref翻译为引用。英语单词：references。ref后面指定的是要注入的bean的id。-->
+        <!--<property name="mySQLUserDao" ref="userDaoBean"/>-->
+
+        <!--set方法起名的时候，不要为难自己，按照规范来。所以一般情况下name位置写属性名就行了。-->
+        <property name="userDao" ref="userDaoBean"/>
+
+        <!--<property name="vipDao" ref="vipDaoBean"/>-->
+        <property name="abc" ref="vipDaoBean"/>
+
+    </bean>
+
+    <bean id="vipDaoBean" class="com.powernode.spring6.dao.VipDao"/>
+
+</beans>
