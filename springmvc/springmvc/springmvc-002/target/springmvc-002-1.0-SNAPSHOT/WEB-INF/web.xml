@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    
+    <!--前端控制器-->
+    <servlet>
+        <servlet-name>springmvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!--通过Servlet的初始化参数来指定Spring MVC配置文件的名字和位置-->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <!--指定了Spring MVC配置文件的名字是: springmvc.xml-->
+            <!--指定了Spring MVC配置文件存放的路径是：类的根路径-->
+            <param-value>classpath:springmvc.xml</param-value>
+        </init-param>
+        <!--在web服务器启动的时候，就初始化DispatcherServlet-->
+        <!--这是优化方式，可以提高用户第一次发送请求的体验。第一次请求的效率较高。-->
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>springmvc</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
+</web-app>

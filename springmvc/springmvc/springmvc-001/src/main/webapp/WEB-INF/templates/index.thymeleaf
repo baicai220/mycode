@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>First Spring MVC</title>
+    </head>
+    <body>
+        <a th:href="@{/test}">first</a>
+        <br><br>
+        <a th:href="@{/heihei}">other</a>
+    </body>
+</html>

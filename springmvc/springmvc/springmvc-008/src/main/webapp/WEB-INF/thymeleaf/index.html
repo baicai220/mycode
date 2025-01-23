@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <!--引入vue-->
+    <script th:src="@{/static/js/vue3.4.21.js}"></script>
+    <!--引入axios-->
+    <script th:src="@{/static/js/axios.min.js}"></script>
+</head>
+<body>
+<h1>使用Vue3 + axios + Thymeleaf + SpringMVC发送AJAX请求</h1>
+<hr>
+
+<form th:action="@{/save}" method="post">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+    <input type="submit" value="保存">
+</form>
+
+<hr>
+
+<a th:href="@{/user/2}">查找id=1的用户信息</a>
+
+<hr>
+
+<div id="app">
+    <button @click="getMessage">获取消息</button>
+    <h1>{{message}}</h1>
+</div>
+
+<script th:inline="javascript">
+
+    /*Vue.createApp({
+        data(){
+            return {
+                message : ''
+            }
+        },
+        methods : {
+            // 异步方法(ajax请求多数情况下都是异步请求)
+            async getMessage(){
+                // 发送ajax请求
+                let response = await axios.get([[@{/}]] + 'ajax')
+                // 将返回的数据交给message
+                this.message = response.data
+            }
+        }
+    }).mount("#app")*/
+
+    // 发送ajax post请求，并且在请求体当中提交json数据
+    let jsonObj = {"name" : "zhangsan", "password" : "1234"}
+
+    Vue.createApp({
+        data(){
+            return {
+                message : ''
+            }
+        },
+        methods : {
+            async getMessage(){
+                let response = await axios.post([[@{/}]] + 'save2', JSON.stringify(jsonObj), {
+                    headers : {
+                        "Content-Type" : "application/json"
+                    }
+                })
+                // 将返回的数据交给message
+                this.message = response.data
+            }
+        }
+    }).mount("#app")
+
+</script>
+
+</body>
+</html>

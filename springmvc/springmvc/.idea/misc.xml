@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/springmvc-001/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-002/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-003/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-004/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-005/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-006/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-007/pom.xml" />
+        <option value="$PROJECT_DIR$/usermgt/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-008/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-009/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-010/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-011/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/ssmtest/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm-annotation/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+      </set>
+    </option>
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
